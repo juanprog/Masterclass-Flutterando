@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:challenge_01/functions/calculate_fibonacci.dart';
 import 'package:challenge_01/functions/calculate_imc.dart';
+import 'package:challenge_01/functions/calculate_rule_three.dart';
 
 void main() {
   String? valueRead;
@@ -61,6 +62,22 @@ void main() {
     stdout.writeln(sequence.substring(0, sequence.length - 2));
   } else {
     stdout.writeln('Valor inválido!');
+  }
+
+  stdout.writeln('------------------------:');
+
+  stdout.writeln('\n----Regra de 3--------:');
+
+  double? g11 = 16, g12 = 24, g21 = 10, g22;
+
+  stdout.writeln('g11: $g11, g12: $g12, g21: $g21, g22: $g22');
+
+  final valueRuleOfThree = calculateRuleOfThree(g11: g11, g12: g12, g21: g21, g22: g22);
+
+  if (valueRuleOfThree == null) {
+    stdout.writeln('\nInformado valores inválidos!');
+  } else {
+    stdout.writeln('\nValor obtido da Regra de 3: $valueRuleOfThree');
   }
 
   stdout.writeln('------------------------:');
