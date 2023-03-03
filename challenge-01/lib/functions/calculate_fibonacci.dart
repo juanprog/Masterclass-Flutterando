@@ -1,10 +1,14 @@
-/// Calcula o número de Fibonacci para o [value] informado.
+/// Calcula a sequência de Fibonacci para o [value] informado.
+/// Recebe a lista com a [sequence], inicialmente preenchida com os dois valores
+/// iniciais da sequencia.
 /// 
-/// Retorna o [int] do valor calculado.
-int calculateFibonacci(int value) {
-  if (value == 0) return 0;
+/// Retorna uma lista de inteiros com a sequência de Fibonacci.
+List<int> calculateFibonacci(int value, List<int> sequence) {
+  if (value == 0) return [0];
+  if (value == 1 || value == (sequence.length - 1)) return sequence;
   
-  if (value == 1 || value == 2) return 1;
-
-  return calculateFibonacci(value - 1) + calculateFibonacci(value - 2);
+  sequence.add(
+    sequence[sequence.length - 1] + sequence[sequence.length - 2]);
+  
+  return calculateFibonacci(value, sequence);
 }

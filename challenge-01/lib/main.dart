@@ -51,15 +51,8 @@ void main() {
   }
 
   if (number >= 0) {
-    String sequence = '';
-
-    for (var i = 0; i <= number; i++) {
-      int numFib = calculateFibonacci(i);
-      sequence += '$numFib, ';
-    }
-
-    stdout.writeln('\nSequência de Fibonacci:');
-    stdout.writeln(sequence.substring(0, sequence.length - 2));
+    stdout.writeln('\nSequência de Fibonacci para <$number>:');
+    stdout.writeln(calculateFibonacci(number, [0, 1]));
   } else {
     stdout.writeln('Valor inválido!');
   }
