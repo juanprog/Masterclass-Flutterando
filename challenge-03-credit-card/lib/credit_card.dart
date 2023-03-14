@@ -3,7 +3,7 @@
 /// O atributo [_value] do tipo [String] representa o número do cartão de crédito.
 /// O método [isValid] valida se o número do cartão de crédito é válido.
 
-class CartaoCredito {
+class CreditCard {
   final String _value;
 
   String get value => _value.replaceAllMapped(RegExp(r'(\d{4})(\d{4})(\d{4})(\d{4})'), ((match) {
@@ -16,7 +16,7 @@ class CartaoCredito {
     }
   }));
 
-  CartaoCredito(String value) : _value = value.replaceAll(RegExp(r'[\D]'), '');
+  CreditCard(String value) : _value = value.replaceAll(RegExp(r'[\D]'), '');
 
   /// Valida se o número de cartão de crédito informado é válido.
   /// Retorna um [true] caso seja válido e [false] caso contrário.

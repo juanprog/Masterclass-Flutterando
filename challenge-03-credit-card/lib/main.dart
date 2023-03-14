@@ -1,8 +1,8 @@
-import 'package:challenge_03_cartao_credito/cartao_credito.dart';
+import 'package:challenge_03_cartao_credito/credit_card.dart';
 
 void main() {
-  final cartaoValido = CartaoCredito('4916641859369080');
-  final cartaoInvalido = CartaoCredito('5419 8250 0346 1210');
+  final cartaoValido = CreditCard('4916641859369080');
+  final cartaoInvalido = CreditCard('5419 8250 0346 1210');
 
   for (var cartao in [cartaoValido, cartaoInvalido]) {
     if (cartao.isValid()) {
