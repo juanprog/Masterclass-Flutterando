@@ -5,10 +5,8 @@ void main() {
   final invalidCard = CreditCard('5419 8250 0346 1210');
 
   for (var card in [validCard, invalidCard]) {
-    if (card.isValid()) {
-      print('O cartão <${card.value}> é VÁLIDO!');
-    } else {
-      print('O cartão <${card.value}> é INVÁLIDO!');
-    }
+    final status = card.isValid() ? 'VÁLIDO' : 'INVÁLIDO';
+
+    print('O cartão (${card.value}) é $status!');
   }
 }
