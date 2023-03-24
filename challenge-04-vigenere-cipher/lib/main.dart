@@ -4,7 +4,7 @@ import 'package:challenge_04_vigenere_cipher/vigenere_cipher.dart';
 import 'key.dart';
 
 void main() {
-  final text1 = Text('ALGORITMO');
+  final text1 = Text('ALGO RITMO');
   final text2 = Text('CRI-PTR0%gr@FIA');
 
   final vigenereCipher = VigenereCipher();

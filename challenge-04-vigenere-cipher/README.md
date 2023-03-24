@@ -26,6 +26,10 @@ C. Decode:
 - Passo 2: deve-se subtrair o charCode de cada letra do texto e da key em suas respectivas posições somando o resultado com 26. O resultado deve ser dividido por 26. O RESTO dessa divisão deve ser somado com o CharCode da letra A.
 - Passo 3: O resultado da soma anterior é o  char descriptografado.
 
+### Output
+
+![Output](assets/images/output.png)
+
 ### Validador
 
 https://www.cs.du.edu/~snarayan/crypt/vigenere.html
