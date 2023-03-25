@@ -6,11 +6,12 @@ import 'key.dart';
 void main() {
   final text1 = Text('ALGO RITMO');
   final text2 = Text('CRI-PTR0%gr@FIA');
+  final text3 = Text('SOL');
 
   final vigenereCipher = VigenereCipher();
 
-  for (var text in [text1, text2]) {
-    final key = Key.buildKey(keyLength: text.validLength);
+  for (var text in [text1, text2, text3]) {
+    final key = Key.buildKey(textLength: text.validLength);
     final encodedText = vigenereCipher.encode(text: text.value, key: key);
 
     final decodedText = vigenereCipher.decode(text: encodedText, key: key);
