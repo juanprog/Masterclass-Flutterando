@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TinderLoginPage extends StatefulWidget {
-  const TinderLoginPage({super.key});
+class TinderPage extends StatefulWidget {
+  const TinderPage({super.key});
 
   @override
-  State<TinderLoginPage> createState() => _TinderLoginPageState();
+  State<TinderPage> createState() => _TinderPageState();
 }
 
-class _TinderLoginPageState extends State<TinderLoginPage> {
+class _TinderPageState extends State<TinderPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -29,7 +29,7 @@ class _TinderLoginPageState extends State<TinderLoginPage> {
             const Expanded(
               child: SizedBox.shrink(),
             ),
-            Image.network(
+            Image.asset(
               'assets/icons/logo_tinder.png',
               height: 150,
             ),
@@ -40,7 +40,7 @@ class _TinderLoginPageState extends State<TinderLoginPage> {
             const SizedBox(height: 24),
             SignButtonWidget(
               text: 'SIGN IN WITH APPLE',
-              icon: Image.network(
+              icon: Image.asset(
                 'assets/icons/apple_logo.png',
                 height: 24,
               ),
@@ -48,7 +48,7 @@ class _TinderLoginPageState extends State<TinderLoginPage> {
             const SizedBox(height: 8),
             SignButtonWidget(
               text: 'SIGN IN WITH FACEBOOK',
-              icon: Image.network(
+              icon: Image.asset(
                 'assets/icons/facebook_logo.png',
                 height: 24,
               ),
@@ -56,7 +56,7 @@ class _TinderLoginPageState extends State<TinderLoginPage> {
             const SizedBox(height: 8),
             SignButtonWidget(
               text: 'SIGN IN WITH PHONE NUMBER',
-              icon: Image.network(
+              icon: Image.asset(
                 'assets/icons/ballon.png',
                 height: 24,
               ),
@@ -78,7 +78,7 @@ class _TinderLoginPageState extends State<TinderLoginPage> {
     return Row(
       children: [
         InkWell(
-          onTap: () => Navigator.pop(context),
+          onTap: () {/* Navigator.pop(context) */},
           child: const Icon(
             Icons.arrow_back_ios,
             color: Colors.white,

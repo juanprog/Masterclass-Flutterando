@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tinder/pages/login_page.dart';
+import 'package:tinder/pages/tinder_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home: const TinderPage(),
     );
   }
 }
